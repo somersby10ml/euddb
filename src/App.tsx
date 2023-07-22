@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
+import { type ReactNode } from 'react';
 import './App.css';
+import { Link } from 'react-router-dom';
 
-function App() {
+type AppProps = {
+  children: ReactNode;
+};
+function App({ children }: AppProps) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="h-screen w-screen bg-gray-700 text-gray-300">
+      <div className="mb-2 w-full border-b border-gray-300">
+        <Link to="/" className="mr-2" />
+      </div>
+      {children}
     </div>
   );
 }

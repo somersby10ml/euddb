@@ -1,0 +1,4 @@
+{
+  "extends": ["eslint-config-retn0"],
+  "root": true
+}
